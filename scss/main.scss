@@ -1,0 +1,323 @@
+// Imports
+@import 'config';
+@import 'utils';
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+// ***** HOME PAGE *****
+header {
+  height: 70vh;
+  width: 100vw;
+  background: $landingImage no-repeat bottom center/cover;
+  background-attachment: fixed;
+  #headerContent {
+    background-color: rgba(102, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $whiteColor;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+    }
+  
+    p {
+      font-size: 2.5rem;
+      margin: .5rem;
+      font-weight: 100;
+    }
+
+    #btnContainer {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}
+
+#programs,
+#financialAidHome {
+  background: $darkGrey;
+  color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+#whyNAU {
+  h2 {
+    color: $darkGrey;
+  }
+
+  #whyIcons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.6rem;
+    text-align: center;
+
+    .iconContainer {
+      i {
+        background: $mainRed;
+        color: $whiteColor;
+        font-size: 2rem;
+        padding: 0.7rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $mainRed;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+#campusTour {
+  background: $tourHomeImage no-repeat center center/cover;
+  background-attachment: fixed;
+
+  #campusTourContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $whiteColor;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+
+    p {
+      font-size: 1.5rem;
+      margin: 1rem;
+    }
+  }
+}
+
+#testimonials {
+  background: $testimonialHome no-repeat center center/cover;
+  background-attachment: fixed;
+  
+  #testimonialOverlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .testimonials {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .testimonial {
+    margin: 3rem 0;
+    padding: 3rem;
+    color: $whiteColor;
+
+    &:nth-child(even) {
+      background: rgba(102, 0, 0, 0.8);
+    }
+
+    &:nth-child(odd) {
+      background: rgba(51, 51, 51, 0.8);
+    }
+  }
+
+  .testimonialInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 100;
+      margin-top: .7rem;
+    }
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonialImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid $whiteColor;
+  }
+
+  blockquote {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+}
+
+// ***** ABOUT PAGE *****
+.aboutLanding {
+  background: $aboutLanding no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 40vw;
+}
+
+.values {
+  font-size: 1.3rem;
+  margin: 1.3rem 0;
+
+  span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+}
+
+// ***** PROGRAMS PAGE *****
+.programsLanding {
+  background: $programsLanding no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 40vw;
+}
+
+.program {
+  border: 1px solid $darkGrey;
+  padding: 2rem;
+
+  .programTitle {
+    font-size: 2rem;
+  }
+
+  .programDescription {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+  }
+
+  .iconContainer {
+    i {
+      background: $mainRed;
+      color: $whiteColor;
+      font-size: 2rem;
+      padding: 0.7rem;
+      border-radius: 50%;
+      margin: 1rem 1rem 0 0;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+      color: $mainRed;
+      display: inline-block;
+    }
+  }
+}
+
+// ***** COST PAGE *****
+.costLanding {
+  background: $costLanding no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 40vw;
+}
+
+table {
+  margin: 2rem 0;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  color: #000;
+  font-size: 1rem;
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr {
+    td:first-child {
+      font-weight: bold;
+    }
+  }
+
+  tr:last-child {
+    td:first-child {
+      text-transform: uppercase;
+    }
+  }
+
+  th {
+    background-color: $mainRed;
+    color: $whiteColor;
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  td {
+    padding: 0.7rem;
+  }
+}
+
+#financialAid {
+  margin-top: 3rem;
+
+  p {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+// ***** ENROLL PAGE *****
+.enrollLanding {
+  background: $enrollLanding no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 40vw;
+}
+
+// ***** TOURS PAGE *****
+.tourLanding {
+  background: $tourLanding no-repeat bottom center/cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 40vw;
+}
+
+// MEDIA QUERIES
+@import 'media';
+
+/***** KEYFRAMES / ANIMATIONS *****/
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "universitysite",
+  "version": "1.0.0",
+  "description": "Website for a University",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Katelin Frederick",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "tar": ">=4.4.2"
+  }
+}

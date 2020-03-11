@@ -1,0 +1,159 @@
+@media(max-width: 1100px) {
+  #whyNAU {
+
+    #whyIcons {
+      margin: 1.5rem 0;
+      grid-template-columns: 1fr;
+
+      .iconContainer {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+}
+
+@media(max-width: 1000px) {
+  #testimonials {
+    background-attachment: initial;
+
+    .testimonials {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonial {
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+
+      .testimonialInfo {
+        display: flex;
+        flex-direction: column;
+
+        .imageContainer {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 650px) {
+  .menu {
+    width: 100vw;
+  }
+
+  header {
+    height: 100vh;
+    background-attachment: initial;
+
+    #headerContent {
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1.3rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      #btnContainer {
+        margin-top: 1.3rem;
+        flex-direction: column;
+      }
+    }
+  }
+
+  #campusTour {
+    background-attachment: initial;
+
+    campusTourContent {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  footer {
+    grid-template-areas: 
+    'contact'
+    'nav'
+    'social';
+
+    .footerNavContainer {
+      margin: 1.5rem 0 0 0;
+
+      a {
+        margin-left: 0;
+      }
+    }
+
+    .footerSocialContainer {
+      font-size: 1.5rem;
+
+      a {
+        i {
+          padding: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .program {
+    .programTitle {
+      font-size: 1.7rem;
+    }
+
+    .programDescription {
+      font-size: 1rem;
+    }
+  }
+
+  .aboutLanding,
+  .programsLanding,
+  .enrollLanding,
+  .costLanding,
+  .tourLanding {
+    height: 70vh;
+    background-attachment: initial;
+  }
+
+  #enrollInfo {
+    font-size: 0.8rem;
+  }
+
+  
+  form {
+    .formGroup {
+      input {
+        width: 80vw;
+      }
+
+      select {
+        width: 80vw;
+      }
+    }
+  }
+
+  table {
+    font-size: 0.7rem;
+
+    th {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 0.9rem 0.1rem;
+    }
+
+    td {
+      text-align: center;
+      padding: 0.9rem 0.1rem;
+    }
+  }
+
+  .container {
+    padding: 3rem 5%;
+  }
+}

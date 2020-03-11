@@ -1,0 +1,250 @@
+// VARIABLES
+$whiteColor: #f4f4f4;
+$mainRed: #660000;
+$darkGrey: #333;
+$landingImage: url('../img/landing.jpg');
+$tourHomeImage: url('../img/tourHome.jpg');
+$testimonialHome: url('../img/testimonialHome.jpg');
+$aboutLanding: url('../img/aboutLanding.jpg');
+$programsLanding: url('../img/programsLanding.jpg');
+$costLanding: url('../img/costLanding.jpg');
+$enrollLanding: url('../img/enrollLanding.jpg');
+$tourLanding: url('../img/tourLanding.jpg');
+
+// RESETS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+// Navigation
+nav {
+  z-index: 2;
+  background: rgba(51, 51, 51, 0.9);
+  color: $whiteColor;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 7%;
+  position: fixed;
+
+  #brand {
+    a {
+      color: $whiteColor;
+      font-size: 2rem;
+    }
+  }
+
+  #toggler {
+    font-size: 2rem;
+    cursor: pointer;
+    height: auto;
+    margin: auto 0;
+
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: $whiteColor;
+      margin: 5px;
+      transition: all 0.4s ease;
+    }
+  }
+}
+
+.toggleOpenClose .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggleOpenClose .line2 {
+  opacity: 0;
+}
+
+.toggleOpenClose .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu {
+  background: rgba(38, 38, 38, 0.8);
+  height: 100vh;
+  width: 50vw;
+  position: fixed;
+  right: -100%;
+  top: -100%;
+  border-radius: 0%;
+  border: 2px solid $whiteColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.5s ease-in-out;
+  #navList {
+    list-style: none;
+    .navItem {
+      margin: 1rem;
+      padding: 1rem;
+      text-align: center;
+      opacity: 0;
+      a {
+        color: $whiteColor;
+        font-size: 2rem;
+        transition: all 0.4s ease-in;
+
+        &:hover {
+          color: $mainRed;
+        }
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $mainRed;
+          left: 0;
+          transform: scaleX(0);
+          transition: all 0.4s linear;
+        }
+
+        &:before {
+          top: 0;
+          transform-origin: left;
+        }
+
+        &:after {
+          bottom: 0;
+          transform-origin: right;
+        }
+
+        &:hover:before,
+        &:hover:after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+.navToggle {
+  right: -10%;
+  top: -1%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+
+// FOOTER
+footer {
+  background: $darkGrey;
+  color: $whiteColor;
+  display: grid;
+  grid-template-areas: 
+    'contact nav'
+    'social social';
+
+  .footerContactContainer {
+    grid-area: contact;
+
+    p {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  .footerNavContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    grid-area: nav;
+
+    ul {
+      list-style: none;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      li {
+        margin: 1rem 0;
+
+        a {
+          color: $whiteColor;
+          margin: 0.7rem;
+          font-size: 1.2rem;
+          transition: all 0.4s;
+          cursor: pointer;
+    
+          &:hover {
+            color: $mainRed;
+          }
+        }
+      }
+    }
+  }
+
+  .footerSocialContainer {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    font-size: 2rem;
+
+    a {
+      color: $whiteColor;
+
+      i {
+        border: 3px solid $whiteColor;
+        padding: 1rem;
+        border-radius: 50%;
+        transition: all 0.4s;
+  
+        &:hover {
+          color: $mainRed;
+          border-color: $mainRed;
+        }
+      }
+    }
+  }
+}
+
+// FORMS
+form {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .formGroup {
+    margin: 1rem 0;
+
+    label {
+      font-size: 1.5rem;
+      color: $mainRed;
+    }
+    
+    input{
+      display: block;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      width: 40vw;
+    }
+
+    select {
+      display: block;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      width: 40vw;
+    }
+  }
+}

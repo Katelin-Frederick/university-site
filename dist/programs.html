@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+  <title>NAU | Home</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <span id="brand">
+      <a href="index.html">NAU</a>
+    </span>
+
+    <div id="toggler">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <div class="menu">
+    <ul id="navList">
+      <li class="navItem"><a href="index.html">Home</a></li>
+      <li class="navItem"><a href="#">Programs</a></li>
+      <li class="navItem"><a href="enroll.html">Enroll</a></li>
+      <li class="navItem"><a href="about.html">About</a></li>
+      <li class="navItem"><a href="cost.html">Cost</a></li>
+      <li class="navItem"><a href="tour.html">Tours</a></li>
+    </ul>
+  </div>
+
+  <!-- Landing -->
+  <div class="programsLanding"></div>
+
+  <div class="container">
+    <h1 class="pageTitle"><span class="redText">Programs</span> Of Study</h1>
+
+    <!-- Programs Section -->
+    <section id="programSection"></section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="container">
+    <div class="footerContactContainer">
+      <h2>Contact:</h2>
+      <p>Phone: (555)555-5555</p>
+      <p>100 N. Main St.</p>
+      <p>Adrian, MI 49221</p>
+    </div>
+
+    <div class="footerNavContainer">
+      <ul>
+        <li><a href="enroll.html">Enroll</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="cost.html">FinancialAid</a></li>
+        <li><a href="tour.html">Request Tour</a></li>
+      </ul>
+    </div>
+
+    <div class="footerSocialContainer">
+      <a href="https://www.facebook.com/" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDZBmpb0igTvW-5id6coR79OoHHk0f4Md4",
+      authDomain: "universtiy-site.firebaseapp.com",
+      databaseURL: "https://universtiy-site.firebaseio.com",
+      projectId: "universtiy-site",
+      storageBucket: "universtiy-site.appspot.com",
+      messagingSenderId: "855804702435",
+      appId: "1:855804702435:web:63798af072d287ae4e1fd6",
+      measurementId: "G-G7H30TGQJJ"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const db = firebase.firestore()
+  </script>
+
+  <script src="js/programs.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
