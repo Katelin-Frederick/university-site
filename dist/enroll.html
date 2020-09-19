@@ -9,6 +9,14 @@
 
   <link rel="stylesheet" href="css/main.css">
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
   <title>NAU | Home</title>
 </head>
 <body>
@@ -62,39 +70,6 @@
         <label for="programOfInterest">Program Of Interest</label>
         <select name="programOfInterest" id="programOfInterest">
           <option value="default" disabled selected hidden>-- Please Select --</option>
-          <option value="accounting">Accounting</option>
-          <option value="art">Art</option>
-          <option value="ascGeneralStudies">Asc. General Studies</option>
-          <option value="ascScience">Asc. Science</option>
-          <option value="automotive">Automotive</option>
-          <option value="aviationFlightTechnology">Aviation Flight Technology</option>
-          <option value="behavioralSciences">Behavioral Sciences</option>
-          <option value="businessAdministration">Business Administration</option>
-          <option value="computerNetworking">Computer Networking</option>
-          <option value="computerProgramming">Computer Programming</option>
-          <option value="corrections">Corrections</option>
-          <option value="culinaryArts">Culinary Arts</option>
-          <option value="cyberSecurity">Cyber Security</option>
-          <option value="dentalHygiene">Dental Hygiene</option>
-          <option value="ecommerce">ECommerce</option>
-          <option value="electrician">Electrician</option>
-          <option value="emergencyMedicalTechnology">Emergency Medical Technology</option>
-          <option value="engineering">Engineering</option>
-          <option value="english">English</option>
-          <option value="graphicDesign">Graphic Design</option>
-          <option value="healthAdministration">Health Administration</option>
-          <option value="history">History</option>
-          <option value="marketing">Marketing</option>
-          <option value="mathematics">Mathematics</option>
-          <option value="medicalAssistant">Medical Assistant</option>
-          <option value="music">Music</option>
-          <option value="nursing">Nursing</option>
-          <option value="preLaw">Pre-Law</option>
-          <option value="psychology">Psychology</option>
-          <option value="radiology">Radiology</option>
-          <option value="science">Science</option>
-          <option value="socialWork">Social Work</option>
-          <option value="sportsManagement">Sports Management</option>
         </select>
       </div>
 
@@ -137,6 +112,27 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDZBmpb0igTvW-5id6coR79OoHHk0f4Md4",
+      authDomain: "universtiy-site.firebaseapp.com",
+      databaseURL: "https://universtiy-site.firebaseio.com",
+      projectId: "universtiy-site",
+      storageBucket: "universtiy-site.appspot.com",
+      messagingSenderId: "855804702435",
+      appId: "1:855804702435:web:63798af072d287ae4e1fd6",
+      measurementId: "G-G7H30TGQJJ"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const db = firebase.firestore()
+  </script>
+
+  <script src="js/enroll.js"></script>
   <script src="js/main.js"></script>
 
 </body>
