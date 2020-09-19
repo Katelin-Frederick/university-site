@@ -15,7 +15,7 @@ const navToggle = () => {
       if(link.style.animation) {
         link.style.animation = '';
       } else {
-        link.style.animation = `navLinkFade 0.7s ease forwards ${index / 6 + 1.5}s`;
+        link.style.animation = `navLinkFade 0.7s ease forwards ${index / 6 + 0.8}s`;
       }
     });
 

@@ -14,14 +14,18 @@ nav {
   z-index: 2;
   background: rgba(51, 51, 51, 0.9);
   color: #f4f4f4;
+  border-bottom: 2px solid #f4f4f4;
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 10px 7%;
   position: fixed; }
-  nav #brand a {
+  nav a#brand {
     color: #f4f4f4;
     font-size: 2rem; }
+    nav a#brand:hover {
+      color: #660000;
+      transition: all 0.4s ease; }
   nav #toggler {
     font-size: 2rem;
     cursor: pointer;
@@ -45,7 +49,7 @@ nav {
 
 .menu {
   background: rgba(38, 38, 38, 0.8);
-  height: 100vh;
+  height: calc(100vh - 57px);
   width: 50vw;
   position: fixed;
   right: -100%;
@@ -55,7 +59,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1.5s ease-in-out; }
+  transition: all 0.8s ease-in-out; }
   .menu #navList {
     list-style: none; }
     .menu #navList .navItem {
@@ -89,10 +93,10 @@ nav {
 
 .navToggle {
   right: -10%;
-  top: -1%;
+  top: 57px;
   border-bottom-left-radius: 50%;
   border-top-left-radius: 50%;
-  transition: all 1.5s ease-in-out; }
+  transition: all 0.8s ease-in-out; }
 
 footer {
   background: #333;
@@ -305,7 +309,7 @@ header {
   #testimonials #testimonialOverlay {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.2); }
+    background: rgba(0, 0, 0, 0.35); }
   #testimonials .testimonials {
     height: 100%;
     width: 100%;
