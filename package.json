@@ -9,7 +9,7 @@
   "author": "Katelin Frederick",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "tar": ">=4.4.2"
   }
 }
