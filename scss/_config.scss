@@ -2,6 +2,7 @@
 $whiteColor: #f4f4f4;
 $mainRed: #660000;
 $darkGrey: #333;
+$gold: #9C6615;
 $landingImage: url('../img/landing.jpg');
 $tourHomeImage: url('../img/tourHome.jpg');
 $testimonialHome: url('../img/testimonialHome.jpg');
@@ -149,6 +150,7 @@ nav {
 footer {
   background: $darkGrey;
   color: $whiteColor;
+  border-top: 4px solid $mainRed;
   display: grid;
   grid-template-areas: 
     'contact nav'

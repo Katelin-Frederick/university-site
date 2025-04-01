@@ -1,6 +1,7 @@
 // Imports
-@import 'config';
-@import 'utils';
+@use 'sass:meta';
+@use 'config';
+@use 'utils';
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
@@ -8,9 +9,10 @@
 header {
   height: 70vh;
   width: 100vw;
-  background: $landingImage no-repeat bottom center/cover;
+  background: config.$landingImage no-repeat bottom center/cover;
   background-attachment: fixed;
   #headerContent {
+    border-bottom: 4px solid config.$gold;
     background-color: rgba(102, 0, 0, 0.7);
     height: 100%;
     width: 100%;
@@ -18,7 +20,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $whiteColor;
+    color: config.$whiteColor;
     text-align: center;
 
     h1 {
@@ -41,8 +43,9 @@ header {
 
 #programs,
 #financialAidHome {
-  background: $darkGrey;
-  color: $whiteColor;
+  border-bottom: 4px solid config.$gold;
+  background: config.$darkGrey;
+  color: config.$whiteColor;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,8 +59,10 @@ header {
 }
 
 #whyNAU {
+  border-bottom: 4px solid config.$gold;
+  
   h2 {
-    color: $darkGrey;
+    color: config.$darkGrey;
   }
 
   #whyIcons {
@@ -68,8 +73,8 @@ header {
 
     .iconContainer {
       i {
-        background: $mainRed;
-        color: $whiteColor;
+        background: config.$mainRed;
+        color: config.$whiteColor;
         font-size: 2rem;
         padding: 0.7rem;
         border-radius: 50%;
@@ -78,7 +83,7 @@ header {
 
       h3 {
         font-size: 2rem;
-        color: $mainRed;
+        color: config.$mainRed;
         margin-bottom: 1rem;
       }
 
@@ -90,8 +95,9 @@ header {
 }
 
 #campusTour {
-  background: $tourHomeImage no-repeat center center/cover;
+  background: config.$tourHomeImage no-repeat center center/cover;
   background-attachment: fixed;
+  border-bottom: 4px solid config.$gold;
 
   #campusTourContent {
     text-align: center;
@@ -99,7 +105,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $whiteColor;
+    color: config.$whiteColor;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
@@ -112,7 +118,7 @@ header {
 }
 
 #testimonials {
-  background: $testimonialHome no-repeat center center/cover;
+  background: config.$testimonialHome no-repeat center center/cover;
   background-attachment: fixed;
   
   #testimonialOverlay {
@@ -132,7 +138,7 @@ header {
   .testimonial {
     margin: 3rem 0;
     padding: 3rem;
-    color: $whiteColor;
+    color: config.$whiteColor;
 
     &:nth-child(even) {
       background: rgba(102, 0, 0, 0.8);
@@ -169,7 +175,7 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid $whiteColor;
+    border: 3px solid config.$whiteColor;
   }
 
   blockquote {
@@ -181,7 +187,8 @@ header {
 
 // ***** ABOUT PAGE *****
 .aboutLanding {
-  background: $aboutLanding no-repeat center center/cover;
+  border-bottom: 4px solid config.$mainRed;
+  background: config.$aboutLanding no-repeat center center/cover;
   background-attachment: fixed;
   width: 100vw;
   height: 40vw;
@@ -199,15 +206,20 @@ header {
 }
 
 // ***** PROGRAMS PAGE *****
+#programs {
+  border-bottom: 4px solid config.$gold;
+}
+
 .programsLanding {
-  background: $programsLanding no-repeat center center/cover;
+  border-bottom: 4px solid config.$mainRed;
+  background: config.$programsLanding no-repeat center center/cover;
   background-attachment: fixed;
   width: 100vw;
   height: 40vw;
 }
 
 .program {
-  border: 1px solid $darkGrey;
+  border: 1px solid config.$darkGrey;
   padding: 2rem;
 
   .programTitle {
@@ -221,8 +233,8 @@ header {
 
   .iconContainer {
     i {
-      background: $mainRed;
-      color: $whiteColor;
+      background: config.$mainRed;
+      color: config.$whiteColor;
       font-size: 2rem;
       padding: 0.7rem;
       border-radius: 50%;
@@ -231,7 +243,7 @@ header {
   
     h3 {
       font-size: 1.5rem;
-      color: $mainRed;
+      color: config.$mainRed;
       display: inline-block;
     }
   }
@@ -239,7 +251,8 @@ header {
 
 // ***** COST PAGE *****
 .costLanding {
-  background: $costLanding no-repeat center center/cover;
+  border-bottom: 4px solid config.$mainRed;
+  background: config.$costLanding no-repeat center center/cover;
   background-attachment: fixed;
   width: 100vw;
   height: 40vw;
@@ -270,8 +283,8 @@ table {
   }
 
   th {
-    background-color: $mainRed;
-    color: $whiteColor;
+    background-color: config.$mainRed;
+    color: config.$whiteColor;
     padding: 0.7rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -293,7 +306,8 @@ table {
 
 // ***** ENROLL PAGE *****
 .enrollLanding {
-  background: $enrollLanding no-repeat center center/cover;
+  border-bottom: 4px solid config.$mainRed;
+  background: config.$enrollLanding no-repeat center center/cover;
   background-attachment: fixed;
   width: 100vw;
   height: 40vw;
@@ -301,14 +315,15 @@ table {
 
 // ***** TOURS PAGE *****
 .tourLanding {
-  background: $tourLanding no-repeat bottom center/cover;
+  border-bottom: 4px solid config.$mainRed;
+  background: config.$tourLanding no-repeat bottom center/cover;
   background-attachment: fixed;
   width: 100vw;
   height: 40vw;
 }
 
 // MEDIA QUERIES
-@import 'media';
+@include meta.load-css('media');
 
 /***** KEYFRAMES / ANIMATIONS *****/
 @keyframes navLinkFade {

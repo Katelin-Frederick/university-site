@@ -2,13 +2,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   overflow-x: hidden;
   position: relative;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+}
 
 nav {
   z-index: 2;
@@ -19,33 +21,41 @@ nav {
   justify-content: space-between;
   width: 100%;
   padding: 10px 7%;
-  position: fixed; }
-  nav a#brand {
-    color: #f4f4f4;
-    font-size: 2rem; }
-    nav a#brand:hover {
-      color: #660000;
-      transition: all 0.4s ease; }
-  nav #toggler {
-    font-size: 2rem;
-    cursor: pointer;
-    height: auto;
-    margin: auto 0; }
-    nav #toggler div {
-      width: 25px;
-      height: 3px;
-      background-color: #f4f4f4;
-      margin: 5px;
-      transition: all 0.4s ease; }
+  position: fixed;
+}
+nav a#brand {
+  color: #f4f4f4;
+  font-size: 2rem;
+}
+nav a#brand:hover {
+  color: #660000;
+  transition: all 0.4s ease;
+}
+nav #toggler {
+  font-size: 2rem;
+  cursor: pointer;
+  height: auto;
+  margin: auto 0;
+}
+nav #toggler div {
+  width: 25px;
+  height: 3px;
+  background-color: #f4f4f4;
+  margin: 5px;
+  transition: all 0.4s ease;
+}
 
 .toggleOpenClose .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px); }
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
 
 .toggleOpenClose .line2 {
-  opacity: 0; }
+  opacity: 0;
+}
 
 .toggleOpenClose .line3 {
-  transform: rotate(45deg) translate(-5px, -6px); }
+  transform: rotate(45deg) translate(-5px, -6px);
+}
 
 .menu {
   background: rgba(38, 38, 38, 0.8);
@@ -59,125 +69,155 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.8s ease-in-out; }
-  .menu #navList {
-    list-style: none; }
-    .menu #navList .navItem {
-      margin: 1rem;
-      padding: 1rem;
-      text-align: center;
-      opacity: 0; }
-      .menu #navList .navItem a {
-        color: #f4f4f4;
-        font-size: 2rem;
-        transition: all 0.4s ease-in; }
-        .menu #navList .navItem a:hover {
-          color: #660000; }
-        .menu #navList .navItem a:before, .menu #navList .navItem a:after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          background-color: #660000;
-          left: 0;
-          transform: scaleX(0);
-          transition: all 0.4s linear; }
-        .menu #navList .navItem a:before {
-          top: 0;
-          transform-origin: left; }
-        .menu #navList .navItem a:after {
-          bottom: 0;
-          transform-origin: right; }
-        .menu #navList .navItem a:hover:before, .menu #navList .navItem a:hover:after {
-          transform: scaleX(1); }
+  transition: all 0.8s ease-in-out;
+}
+.menu #navList {
+  list-style: none;
+}
+.menu #navList .navItem {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0;
+}
+.menu #navList .navItem a {
+  color: #f4f4f4;
+  font-size: 2rem;
+  transition: all 0.4s ease-in;
+}
+.menu #navList .navItem a:hover {
+  color: #660000;
+}
+.menu #navList .navItem a:before, .menu #navList .navItem a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #660000;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.4s linear;
+}
+.menu #navList .navItem a:before {
+  top: 0;
+  transform-origin: left;
+}
+.menu #navList .navItem a:after {
+  bottom: 0;
+  transform-origin: right;
+}
+.menu #navList .navItem a:hover:before, .menu #navList .navItem a:hover:after {
+  transform: scaleX(1);
+}
 
 .navToggle {
   right: -10%;
   top: 57px;
   border-bottom-left-radius: 50%;
   border-top-left-radius: 50%;
-  transition: all 0.8s ease-in-out; }
+  transition: all 0.8s ease-in-out;
+}
 
 footer {
   background: #333;
   color: #f4f4f4;
+  border-top: 4px solid #660000;
   display: grid;
-  grid-template-areas: 'contact nav' 'social social'; }
-  footer .footerContactContainer {
-    grid-area: contact; }
-    footer .footerContactContainer p {
-      margin: 1rem 0;
-      font-size: 1.2rem; }
-  footer .footerNavContainer {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    grid-area: nav; }
-    footer .footerNavContainer ul {
-      list-style: none;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column; }
-      footer .footerNavContainer ul li {
-        margin: 1rem 0; }
-        footer .footerNavContainer ul li a {
-          color: #f4f4f4;
-          margin: 0.7rem;
-          font-size: 1.2rem;
-          transition: all 0.4s;
-          cursor: pointer; }
-          footer .footerNavContainer ul li a:hover {
-            color: #660000; }
-  footer .footerSocialContainer {
-    grid-area: social;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-    font-size: 2rem; }
-    footer .footerSocialContainer a {
-      color: #f4f4f4; }
-      footer .footerSocialContainer a i {
-        border: 3px solid #f4f4f4;
-        padding: 1rem;
-        border-radius: 50%;
-        transition: all 0.4s; }
-        footer .footerSocialContainer a i:hover {
-          color: #660000;
-          border-color: #660000; }
+  grid-template-areas: "contact nav" "social social";
+}
+footer .footerContactContainer {
+  grid-area: contact;
+}
+footer .footerContactContainer p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+footer .footerNavContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  grid-area: nav;
+}
+footer .footerNavContainer ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+footer .footerNavContainer ul li {
+  margin: 1rem 0;
+}
+footer .footerNavContainer ul li a {
+  color: #f4f4f4;
+  margin: 0.7rem;
+  font-size: 1.2rem;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+footer .footerNavContainer ul li a:hover {
+  color: #660000;
+}
+footer .footerSocialContainer {
+  grid-area: social;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  font-size: 2rem;
+}
+footer .footerSocialContainer a {
+  color: #f4f4f4;
+}
+footer .footerSocialContainer a i {
+  border: 3px solid #f4f4f4;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+footer .footerSocialContainer a i:hover {
+  color: #660000;
+  border-color: #660000;
+}
 
 form {
   margin: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
-  form .formGroup {
-    margin: 1rem 0; }
-    form .formGroup label {
-      font-size: 1.5rem;
-      color: #660000; }
-    form .formGroup input {
-      display: block;
-      padding: 0.5rem;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      width: 40vw; }
-    form .formGroup select {
-      display: block;
-      padding: 0.5rem;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      width: 40vw; }
+  flex-direction: column;
+}
+form .formGroup {
+  margin: 1rem 0;
+}
+form .formGroup label {
+  font-size: 1.5rem;
+  color: #660000;
+}
+form .formGroup input {
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  width: 40vw;
+}
+form .formGroup select {
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  width: 40vw;
+}
 
 a {
   text-decoration: none;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .container {
-  padding: 3rem 10%; }
+  padding: 3rem 10%;
+}
 
 .btn {
   color: #f4f4f4;
@@ -186,9 +226,11 @@ a {
   border-radius: 5px;
   margin: 1rem;
   font-size: 1.5rem;
-  transition: all 0.5s; }
-  .btn:hover {
-    background: rgba(244, 244, 244, 0.3); }
+  transition: all 0.5s;
+}
+.btn:hover {
+  background: rgba(244, 244, 244, 0.3);
+}
 
 .btnDark {
   color: #f4f4f4;
@@ -199,200 +241,256 @@ a {
   margin: 1rem 0;
   font-size: 1.5rem;
   transition: all 0.5s;
-  width: 40vw; }
-  .btnDark:hover {
-    background: rgba(102, 0, 0, 0.8); }
+  width: 40vw;
+}
+.btnDark:hover {
+  background: rgba(102, 0, 0, 0.8);
+}
 
 .sectionTitle {
   font-size: 2.5rem;
   color: #f4f4f4;
   text-align: center;
-  margin: 1.5rem; }
+  margin: 1.5rem;
+}
 
 .redText {
-  color: #660000; }
+  color: #660000;
+}
 
 .pageTitle {
   font-size: 3rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+}
 
 .aboutSectionTitle {
   font-size: 2.2rem;
-  margin: 2rem 0 1.5rem 0; }
+  margin: 2rem 0 1.5rem 0;
+}
 
 .aboutSectionText {
   line-height: 1.6rem;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+}
 
 header {
   height: 70vh;
   width: 100vw;
   background: url("../img/landing.jpg") no-repeat bottom center/cover;
-  background-attachment: fixed; }
-  header #headerContent {
-    background-color: rgba(102, 0, 0, 0.7);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #f4f4f4;
-    text-align: center; }
-    header #headerContent h1 {
-      font-size: 4rem; }
-    header #headerContent p {
-      font-size: 2.5rem;
-      margin: .5rem;
-      font-weight: 100; }
-    header #headerContent #btnContainer {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row; }
+  background-attachment: fixed;
+}
+header #headerContent {
+  border-bottom: 4px solid #9C6615;
+  background-color: rgba(102, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f4f4f4;
+  text-align: center;
+}
+header #headerContent h1 {
+  font-size: 4rem;
+}
+header #headerContent p {
+  font-size: 2.5rem;
+  margin: 0.5rem;
+  font-weight: 100;
+}
+header #headerContent #btnContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
 
 #programs,
 #financialAidHome {
+  border-bottom: 4px solid #9C6615;
   background: #333;
   color: #f4f4f4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; }
-  #programs p,
-  #financialAidHome p {
-    font-size: 1.5rem;
-    margin: 1rem; }
+  text-align: center;
+}
+#programs p,
+#financialAidHome p {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
 
+#whyNAU {
+  border-bottom: 4px solid #9C6615;
+}
 #whyNAU h2 {
-  color: #333; }
-
+  color: #333;
+}
 #whyNAU #whyIcons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.6rem;
-  text-align: center; }
-  #whyNAU #whyIcons .iconContainer i {
-    background: #660000;
-    color: #f4f4f4;
-    font-size: 2rem;
-    padding: 0.7rem;
-    border-radius: 50%;
-    margin-bottom: 1rem; }
-  #whyNAU #whyIcons .iconContainer h3 {
-    font-size: 2rem;
-    color: #660000;
-    margin-bottom: 1rem; }
-  #whyNAU #whyIcons .iconContainer p {
-    font-size: 1.3rem; }
+  text-align: center;
+}
+#whyNAU #whyIcons .iconContainer i {
+  background: #660000;
+  color: #f4f4f4;
+  font-size: 2rem;
+  padding: 0.7rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+#whyNAU #whyIcons .iconContainer h3 {
+  font-size: 2rem;
+  color: #660000;
+  margin-bottom: 1rem;
+}
+#whyNAU #whyIcons .iconContainer p {
+  font-size: 1.3rem;
+}
 
 #campusTour {
   background: url("../img/tourHome.jpg") no-repeat center center/cover;
-  background-attachment: fixed; }
-  #campusTour #campusTourContent {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #f4f4f4;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%; }
-    #campusTour #campusTourContent p {
-      font-size: 1.5rem;
-      margin: 1rem; }
+  background-attachment: fixed;
+  border-bottom: 4px solid #9C6615;
+}
+#campusTour #campusTourContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f4f4f4;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+#campusTour #campusTourContent p {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
 
 #testimonials {
   background: url("../img/testimonialHome.jpg") no-repeat center center/cover;
-  background-attachment: fixed; }
-  #testimonials #testimonialOverlay {
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.35); }
-  #testimonials .testimonials {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem; }
-  #testimonials .testimonial {
-    margin: 3rem 0;
-    padding: 3rem;
-    color: #f4f4f4; }
-    #testimonials .testimonial:nth-child(even) {
-      background: rgba(102, 0, 0, 0.8); }
-    #testimonials .testimonial:nth-child(odd) {
-      background: rgba(51, 51, 51, 0.8); }
-  #testimonials .testimonialInfo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 2rem; }
-    #testimonials .testimonialInfo h2 {
-      font-size: 2.5rem; }
-    #testimonials .testimonialInfo h4 {
-      font-size: 1.3rem;
-      font-weight: 100;
-      margin-top: .7rem; }
-  #testimonials .imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  #testimonials .testimonialImage {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #f4f4f4; }
-  #testimonials blockquote {
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 0 1.5rem; }
+  background-attachment: fixed;
+}
+#testimonials #testimonialOverlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}
+#testimonials .testimonials {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+#testimonials .testimonial {
+  margin: 3rem 0;
+  padding: 3rem;
+  color: #f4f4f4;
+}
+#testimonials .testimonial:nth-child(even) {
+  background: rgba(102, 0, 0, 0.8);
+}
+#testimonials .testimonial:nth-child(odd) {
+  background: rgba(51, 51, 51, 0.8);
+}
+#testimonials .testimonialInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+}
+#testimonials .testimonialInfo h2 {
+  font-size: 2.5rem;
+}
+#testimonials .testimonialInfo h4 {
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-top: 0.7rem;
+}
+#testimonials .imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#testimonials .testimonialImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #f4f4f4;
+}
+#testimonials blockquote {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 1.5rem;
+}
 
 .aboutLanding {
+  border-bottom: 4px solid #660000;
   background: url("../img/aboutLanding.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   width: 100vw;
-  height: 40vw; }
+  height: 40vw;
+}
 
 .values {
   font-size: 1.3rem;
-  margin: 1.3rem 0; }
-  .values span {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-decoration: underline; }
+  margin: 1.3rem 0;
+}
+.values span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+#programs {
+  border-bottom: 4px solid #9C6615;
+}
 
 .programsLanding {
+  border-bottom: 4px solid #660000;
   background: url("../img/programsLanding.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   width: 100vw;
-  height: 40vw; }
+  height: 40vw;
+}
 
 .program {
   border: 1px solid #333;
-  padding: 2rem; }
-  .program .programTitle {
-    font-size: 2rem; }
-  .program .programDescription {
-    margin: 1rem 0;
-    font-size: 1.3rem; }
-  .program .iconContainer i {
-    background: #660000;
-    color: #f4f4f4;
-    font-size: 2rem;
-    padding: 0.7rem;
-    border-radius: 50%;
-    margin: 1rem 1rem 0 0; }
-  .program .iconContainer h3 {
-    font-size: 1.5rem;
-    color: #660000;
-    display: inline-block; }
+  padding: 2rem;
+}
+.program .programTitle {
+  font-size: 2rem;
+}
+.program .programDescription {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+.program .iconContainer i {
+  background: #660000;
+  color: #f4f4f4;
+  font-size: 2rem;
+  padding: 0.7rem;
+  border-radius: 50%;
+  margin: 1rem 1rem 0 0;
+}
+.program .iconContainer h3 {
+  font-size: 1.5rem;
+  color: #660000;
+  display: inline-block;
+}
 
 .costLanding {
+  border-bottom: 4px solid #660000;
   background: url("../img/costLanding.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   width: 100vw;
-  height: 40vw; }
+  height: 40vw;
+}
 
 table {
   margin: 2rem 0;
@@ -400,126 +498,173 @@ table {
   text-align: left;
   border-collapse: collapse;
   color: #000;
-  font-size: 1rem; }
-  table tr:nth-child(even) {
-    background-color: #f2f2f2; }
-  table tr td:first-child {
-    font-weight: bold; }
-  table tr:last-child td:first-child {
-    text-transform: uppercase; }
-  table th {
-    background-color: #660000;
-    color: #f4f4f4;
-    padding: 0.7rem;
-    font-size: 1.2rem;
-    font-weight: bold; }
-  table td {
-    padding: 0.7rem; }
+  font-size: 1rem;
+}
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table tr td:first-child {
+  font-weight: bold;
+}
+table tr:last-child td:first-child {
+  text-transform: uppercase;
+}
+table th {
+  background-color: #660000;
+  color: #f4f4f4;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+table td {
+  padding: 0.7rem;
+}
 
 #financialAid {
-  margin-top: 3rem; }
-  #financialAid p {
-    font-size: 1.5rem;
-    margin-top: 2rem; }
+  margin-top: 3rem;
+}
+#financialAid p {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
 
 .enrollLanding {
+  border-bottom: 4px solid #660000;
   background: url("../img/enrollLanding.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   width: 100vw;
-  height: 40vw; }
+  height: 40vw;
+}
 
 .tourLanding {
+  border-bottom: 4px solid #660000;
   background: url("../img/tourLanding.jpg") no-repeat bottom center/cover;
   background-attachment: fixed;
   width: 100vw;
-  height: 40vw; }
+  height: 40vw;
+}
 
 @media (max-width: 1100px) {
   #whyNAU #whyIcons {
     margin: 1.5rem 0;
-    grid-template-columns: 1fr; }
-    #whyNAU #whyIcons .iconContainer {
-      margin: 1.5rem 0; } }
-
+    grid-template-columns: 1fr;
+  }
+  #whyNAU #whyIcons .iconContainer {
+    margin: 1.5rem 0;
+  }
+}
 @media (max-width: 1000px) {
   #testimonials {
-    background-attachment: initial; }
-    #testimonials .testimonials {
-      grid-template-columns: 1fr; }
-    #testimonials .testimonial {
-      margin: 0;
-      padding: 1rem;
-      text-align: center; }
-      #testimonials .testimonial .testimonialInfo {
-        display: flex;
-        flex-direction: column; }
-        #testimonials .testimonial .testimonialInfo .imageContainer {
-          margin-bottom: 1.5rem; } }
-
+    background-attachment: initial;
+  }
+  #testimonials .testimonials {
+    grid-template-columns: 1fr;
+  }
+  #testimonials .testimonial {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+  }
+  #testimonials .testimonial .testimonialInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  #testimonials .testimonial .testimonialInfo .imageContainer {
+    margin-bottom: 1.5rem;
+  }
+}
 @media (max-width: 650px) {
   .menu {
-    width: 100vw; }
+    width: 100vw;
+  }
   header {
     height: 100vh;
-    background-attachment: initial; }
-    header #headerContent h1 {
-      font-size: 3rem;
-      margin-bottom: 1.3rem; }
-    header #headerContent p {
-      font-size: 2rem; }
-    header #headerContent #btnContainer {
-      margin-top: 1.3rem;
-      flex-direction: column; }
+    background-attachment: initial;
+  }
+  header #headerContent h1 {
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+  }
+  header #headerContent p {
+    font-size: 2rem;
+  }
+  header #headerContent #btnContainer {
+    margin-top: 1.3rem;
+    flex-direction: column;
+  }
   #campusTour {
-    background-attachment: initial; }
-    #campusTour campusTourContent p {
-      font-size: 1rem; }
+    background-attachment: initial;
+  }
+  #campusTour campusTourContent p {
+    font-size: 1rem;
+  }
   footer {
-    grid-template-areas: 'contact' 'nav' 'social'; }
-    footer .footerNavContainer {
-      margin: 1.5rem 0 0 0; }
-      footer .footerNavContainer a {
-        margin-left: 0; }
-    footer .footerSocialContainer {
-      font-size: 1.5rem; }
-      footer .footerSocialContainer a i {
-        padding: 0.7rem; }
+    grid-template-areas: "contact" "nav" "social";
+  }
+  footer .footerNavContainer {
+    margin: 1.5rem 0 0 0;
+  }
+  footer .footerNavContainer a {
+    margin-left: 0;
+  }
+  footer .footerSocialContainer {
+    font-size: 1.5rem;
+  }
+  footer .footerSocialContainer a i {
+    padding: 0.7rem;
+  }
   .pageTitle {
-    font-size: 2rem; }
+    font-size: 2rem;
+  }
   .program .programTitle {
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+  }
   .program .programDescription {
-    font-size: 1rem; }
+    font-size: 1rem;
+  }
   .aboutLanding,
   .programsLanding,
   .enrollLanding,
   .costLanding,
   .tourLanding {
     height: 70vh;
-    background-attachment: initial; }
+    background-attachment: initial;
+  }
   #enrollInfo {
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+  }
   form .formGroup input {
-    width: 80vw; }
+    width: 80vw;
+  }
   form .formGroup select {
-    width: 80vw; }
+    width: 80vw;
+  }
   table {
-    font-size: 0.7rem; }
-    table th {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 0.9rem 0.1rem; }
-    table td {
-      text-align: center;
-      padding: 0.9rem 0.1rem; }
+    font-size: 0.7rem;
+  }
+  table th {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.9rem 0.1rem;
+  }
+  table td {
+    text-align: center;
+    padding: 0.9rem 0.1rem;
+  }
   .container {
-    padding: 3rem 5%; } }
-
+    padding: 3rem 5%;
+  }
+}
 /***** KEYFRAMES / ANIMATIONS *****/
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    transform: translateX(50px); }
+    transform: translateX(50px);
+  }
   to {
     opacity: 1;
-    transform: translateX(0px); } }
+    transform: translateX(0px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
